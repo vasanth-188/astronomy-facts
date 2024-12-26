@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astronomy Facts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-top: 20px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        p {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Astronomy Facts</h1>
+        <button id="generateFact">Generate Fact</button>
+        <p id="factDisplay"></p>
+    </div>
+    <script>
+        const astronomyFacts = [
+            "The Universe is Expanding: Edwin Hubble discovered that galaxies are moving away from us, indicating that the universe is expanding. This led to the formulation of the Big Bang theory.",
+            "Black Holes: These are regions in space where the gravitational pull is so strong that nothing, not even light, can escape from them. They are formed when massive stars collapse under their own gravity.",
+            "The Milky Way: Our galaxy, the Milky Way, is a barred spiral galaxy containing over 200 billion stars. It is about 100,000 light-years in diameter.",
+            "Light-Year: A light-year is the distance that light travels in one year, which is about 5.88 trillion miles (9.46 trillion kilometers).",
+            "Exoplanets: These are planets that orbit stars outside our solar system. Thousands of exoplanets have been discovered, some of which may have conditions suitable for life.",
+            "The Sun: The Sun is a star at the center of our solar system. It accounts for about 99.86% of the total mass of the solar system.",
+            "Dark Matter and Dark Energy: About 27% of the universe is dark matter, which does not emit light or energy, and about 68% is dark energy, which is driving the accelerated expansion of the universe.",
+            "The Moon's Influence: The gravitational pull of the Moon affects the Earth's tides. It also stabilizes the Earth's rotation, which helps maintain a stable climate.",
+            "The Great Red Spot: This is a massive storm on Jupiter that has been raging for at least 350 years. It is so large that three Earths could fit inside it.",
+            "Pulsars: These are highly magnetized, rotating neutron stars that emit beams of electromagnetic radiation. They are incredibly dense and can rotate several hundred times per second."
+        ];
+
+        document.getElementById('generateFact').addEventListener('click', function() {
+            const randomIndex = Math.floor(Math.random() * astronomyFacts.length);
+            document.getElementById('factDisplay').textContent = astronomyFacts[randomIndex];
+        });
+    </script>
+</body>
+</html>
